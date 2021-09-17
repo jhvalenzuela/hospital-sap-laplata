@@ -96,7 +96,7 @@
     </section><!-- End Cta Section -->
 
     <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
+   {{--  <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -128,7 +128,7 @@
         </div>
 
       </div>
-    </section><!-- End About Us Section -->
+    </section> --}}<!-- End About Us Section -->
 
     <!-- ======= Counts Section ======= -->
    {{--  <section id="counts" class="counts">
@@ -271,7 +271,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+   {{--  <section id="testimonials" class="testimonials">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -339,7 +339,7 @@
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section> --}}<!-- End Testimonials Section -->
 
     <!-- ======= Doctors Section ======= -->
     <section id="doctors" class="doctors section-bg">
@@ -447,6 +447,15 @@
           <a href="{{ asset('img/gallery/gallery-6.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-6.jpg') }}" alt=""></a>
           <a href="{{ asset('img/gallery/gallery-7.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-7.jpg') }}" alt=""></a>
           <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-8.jpg') }}" alt=""></a>
+          <a href="{{ asset('img/gallery/gallery-9.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-9.jpg') }}" alt=""></a>
+          <a href="{{ asset('img/gallery/gallery-10.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-10.jpg') }}" alt=""></a>
+          <a href="{{ asset('img/gallery/gallery-11.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-11.jpg') }}" alt=""></a>
+          <a href="{{ asset('img/gallery/gallery-12.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-12.jpg') }}" alt=""></a>
+          <a href="{{ asset('img/gallery/gallery-13.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-13.jpg') }}" alt=""></a>
+          <a href="{{ asset('img/gallery/gallery-14.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-14.jpg') }}" alt=""></a>
+          <a href="{{ asset('img/gallery/gallery-15.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-15.jpg') }}" alt=""></a>
+          <a href="{{ asset('img/gallery/gallery-16.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-16.jpg') }}" alt=""></a>
+          <a href="{{ asset('img/gallery/gallery-17.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('img/gallery/gallery-17.jpg') }}" alt=""></a>
         </div>
 
       </div>

@@ -34,6 +34,38 @@ h1, h2, h3, h4, h5, h6 {
   color: #D2462F;
 }
 
+
+.social-links-top a {
+  font-size: 18px;
+  display: inline-block;
+  background: #3fbbc0;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50px;
+  text-align: center;
+  width: 34px;
+  height: 34px;
+  transition: 0.3s;
+}
+
+.social-links-top a.twitter:hover  {
+  background: #00acee;
+  text-decoration: none;
+}
+
+.social-links-top a.facebook:hover {
+  background: #3b5998;
+  text-decoration: none;
+}
+
+.social-links-top a.instagram:hover {
+  background: #ac2bac;
+  text-decoration: none;
+}
+
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/

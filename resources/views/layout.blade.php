@@ -41,8 +41,13 @@
         <i class="icofont-clock-time"></i> Lunes - Viernes, 8AM a 5PM
       </div>
       <div class="d-flex align-items-center">
-        <i class="icofont-phone"></i> llamanos ahora 60 8370149 - 60 8370163
+        <i class="icofont-phone"></i> Telefonos: 60 8370149 - 60 8370163
       </div>
+        <div class="social-links-top">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        </div>
     </div>
   </div>
 
