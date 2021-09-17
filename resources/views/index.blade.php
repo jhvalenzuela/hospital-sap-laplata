@@ -365,7 +365,7 @@
               </div>
               <div class="member-info">
                 <h4>Walter White</h4>
-                <span>Chief Medical Officer</span>
+                <span>Especialidad</span>
               </div>
             </div>
           </div>
@@ -382,8 +382,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Anesthesiologist</span>
+                <h4>Walter Jhonson</h4>
+                <span>Especialidad</span>
               </div>
             </div>
           </div>
@@ -400,8 +400,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>Cardiology</span>
+                <h4>Walter Jhonson</h4>
+                <span>Especialidad</span>
               </div>
             </div>
           </div>
@@ -418,8 +418,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Neurosurgeon</span>
+                <h4>Walter Jhonson</h4>
+                <span>Especialidad</span>
               </div>
             </div>
           </div>
