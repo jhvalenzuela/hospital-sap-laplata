@@ -255,13 +255,28 @@ return [
         ],
         [
             'text'        => 'Inicio',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'route'         => 'admin.home',
+            'icon'        => 'fas fa-tachometer-alt fa-fw',
+            // 'label'       => 4,
+            // 'label_color' => 'success',
         ],
-        ['header' => 'SLIDER - PRINCIPAL'],
-        ['header' => 'NORMATIVIDAD'],
+        ['header' => 'ADMINISTRADOR'],
+         [
+            'text' => 'Citas',
+            'route'  => 'admin.appointments.index',
+            'icon' => 'fab fa-fw fa-buffer',
+        ],
+        [
+            'text' => 'Slider Principal',
+            'url'  => '#',
+            'icon' => 'fab fa-fw fa-buffer',
+        ],
+        [
+            'text' => 'Normatividad',
+            'url'  => '#',
+            'icon' => 'fab fa-fw fa-buffer',
+        ],
+       
         ['header' => 'account_settings'],
         [
             'text' => 'profile',

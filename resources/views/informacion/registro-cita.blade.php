@@ -29,25 +29,18 @@
           <p>Señor usuario a través del siguiente formulario usted puede solicitar su cita medica. Por favor diligencie todos los campos.</p>
         </div>
 
-        <form action="{{ url('/informacion-ciudadano')}}" method="POST" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
-        	@csrf
+        <form action="{{ url('notas')}}" method="POST" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
           <div class="form-row">
             <div class="col-md-4 form-group">
-              <input type="text" name="citNombres" class="form-control" id="name" value="{{ old('citNombres') }}" placeholder="Nombres" data-rule="minlen:4" data-msg="Ingrese al menos 4 caracteres">
-              @error('citNombres')
-              	 <div class="validate">{{ $message }}</div>
-              @enderror
-              {{-- <div class="validate"></div> --}}
+              <input type="text" name="name" class="form-control" id="name" placeholder="Nombres" data-rule="minlen:4" data-msg="Ingrese al menos 4 caracteres">
+              <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group">
-              <input type="text" name="citApellidos" class="form-control" id="surname" value="{{ old('citApellidos') }}" placeholder="Apellidos" data-rule="minlen:4" data-msg="Ingrese al menos 4 caracteres">
-              @error('citApellidos')
-              		<div class="validate">{{ $message }}</div>
-              @enderror
-             {{--  <div class="validate"></div> --}}
+              <input type="text" name="surnames" class="form-control" id="surname" placeholder="Apellidos" data-rule="minlen:4" data-msg="Ingrese al menos 4 caracteres">
+              <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group">
-              <select name="citTipoDocumento" id="typedocument" value="{{ old('citTipoDocumento') }}" class="form-control">
+              <select name="typedocument" id="typedocument" class="form-control">
                 <option value="">Tipo de Documento</option>
                 <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
                 <option value="Cédula de Extranjería">Cédula de Extranjería</option>
@@ -55,63 +48,54 @@
                 <option value="Registro Civil">Registro Civil</option>
                 <option value="Pasaporte">Pasaporte</option>
               </select>
-              @error('citTipoDocumento')
-              	 <div class="validate">{{ $message }}</div>
-              @enderror
-              {{-- <div class="validate"></div> --}}
+              <div class="validate"></div>
             </div>
           </div>
           <div class="form-row">
           	<div class="col-md-4 form-group">
-              <input type="number" class="form-control" name="citNumDocumento" id="" value="{{ old('citNumDocumento') }}" placeholder="Numero de Identificación" data-rule="minlen:8" data-msg="Por favor ingrese numero de identificación">
-              @error('citNumDocumento')
-              	 <div class="validate">{{ $message }}</div>
-              @enderror
-               {{-- <div class="validate"></div> --}}
+              <input type="number" class="form-control" name="numberDocument" id="" placeholder="Numero de Identificación" data-rule="minlen:8" data-msg="Por favor ingrese numero de identificación">
+              <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group">
-              <input type="date" name="citFecNacimiento" class="form-control" id="birthdate" value="{{ old('citFecNacimiento') }}" placeholder="Fecha de Nacimiento" data-rule="minlen:4" data-msg="Por favor ingresar fecha de nacimiento">
-              @error('citFecNacimiento')
-              	 <div class="validate">{{ $message }}</div>
-              @enderror
-              {{-- <div class="validate"></div> --}}
+              <input type="date" name="birthdate" class="form-control" id="birthdate" placeholder="Fecha de Nacimiento" data-rule="minlen:4" data-msg="Por favor ingresar fecha de nacimiento">
+              <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group">
-              <select name="citResidencia" id="citResidencia" value="{{ old('citResidencia') }}" class="form-control">
+              <select name="residence" id="residence" class="form-control">
               	<option value="">Lugar de Residencia</option>
-				<option value="ABEJORRAL">ABEJORRAL</option>
-				<option value="ABREGO">ABREGO</option>
-				<option value="ABRIAQUI">ABRIAQUI</option>
-				<option value="ACACIAS">ACACIAS</option>
-				<option value="ACANDI">ACANDI</option>
-				<option value="ACEVEDO">ACEVEDO</option>
-				<option value="ACHI">ACHI</option>
-				<option value="AGRADO">AGRADO</option>
-				<option value="AGUA DE DIOS">AGUA DE DIOS</option>
-				<option value="AGUACHICA">AGUACHICA</option>
-				<option value="AGUADA">AGUADA</option>
-				<option value="AGUADAS">AGUADAS</option>
-				<option value="AGUAZUL">AGUAZUL</option>
+				<option value="ABEJORRAL" >ABEJORRAL</option>
+				<option value="ABREGO"  >ABREGO</option>
+				<option value="ABRIAQUI"  >ABRIAQUI</option>
+				<option value="ACACIAS"  >ACACIAS</option>
+				<option value="ACANDI"  >ACANDI</option>
+				<option value="ACEVEDO"  >ACEVEDO</option>
+				<option value="ACHI"  >ACHI</option>
+				<option value="AGRADO"  >AGRADO</option>
+				<option value="AGUA DE DIOS"  >AGUA DE DIOS</option>
+				<option value="AGUACHICA"  >AGUACHICA</option>
+				<option value="AGUADA"  >AGUADA</option>
+				<option value="AGUADAS"  >AGUADAS</option>
+				<option value="AGUAZUL"  >AGUAZUL</option>
 				<option value="AGUSTIN CODAZZI"  >AGUSTIN CODAZZI</option>
-				<option value="AIPE">AIPE</option>
-				<option value="ALBAN">ALBAN</option>
-				<option value="ALBANIA">ALBANIA</option>
-				<option value="ALCALA">ALCALA</option>
-				<option value="ALDANA">ALDANA</option>
-				<option value="ALEJANDRIA">ALEJANDRIA</option>
-				<option value="ALGARROBO">ALGARROBO</option>
-				<option value="ALGECIRAS">ALGECIRAS</option>
-				<option value="ALMAGUER">ALMAGUER</option>
-				<option value="ALMEIDA">ALMEIDA</option>
-				<option value="ALPUJARRA">ALPUJARRA</option>
-				<option value="ALTAMIRA">ALTAMIRA</option>
-				<option value="ALTO BAUDO">ALTO BAUDO</option>
-				<option value="ALTOS DEL ROSARIO">ALTOS DEL ROSARIO</option>
-				<option value="ALVARADO">ALVARADO</option>
-				<option value="AMAGA">AMAGA</option>
-				<option value="AMALFI">AMALFI</option>
-				<option value="AMBALEMA">AMBALEMA</option>
-				<option value="ANAPOIMA">ANAPOIMA</option>
+				<option value="AIPE"  >AIPE</option>
+				<option value="ALBAN"  >ALBAN</option>
+				<option value="ALBANIA"  >ALBANIA</option>
+				<option value="ALCALA"  >ALCALA</option>
+				<option value="ALDANA"  >ALDANA</option>
+				<option value="ALEJANDRIA"  >ALEJANDRIA</option>
+				<option value="ALGARROBO"  >ALGARROBO</option>
+				<option value="ALGECIRAS"  >ALGECIRAS</option>
+				<option value="ALMAGUER"  >ALMAGUER</option>
+				<option value="ALMEIDA"  >ALMEIDA</option>
+				<option value="ALPUJARRA"  >ALPUJARRA</option>
+				<option value="ALTAMIRA"  >ALTAMIRA</option>
+				<option value="ALTO BAUDO"  >ALTO BAUDO</option>
+				<option value="ALTOS DEL ROSARIO"  >ALTOS DEL ROSARIO</option>
+				<option value="ALVARADO"  >ALVARADO</option>
+				<option value="AMAGA"  >AMAGA</option>
+				<option value="AMALFI"  >AMALFI</option>
+				<option value="AMBALEMA"  >AMBALEMA</option>
+				<option value="ANAPOIMA"  >ANAPOIMA</option>
 				<option value="ANCUYA"  >ANCUYA</option>
 				<option value="ANDALUCIA"  >ANDALUCIA</option>
 				<option value="ANDES"  >ANDES</option>
@@ -1084,98 +1068,86 @@
 				<option value="VILLANUEVA"  >VILLANUEVA</option>
 				<option value="VILLAPINZON"  >VILLAPINZON</option>
 				<option value="VILLARRICA"  >VILLARRICA</option>
-				<option value="VILLAVICENCIO" >VILLAVICENCIO</option>
-				<option value="VILLAVIEJA" >VILLAVIEJA</option>
-				<option value="VILLETA" >VILLETA</option>
-				<option value="VIOTA" >VIOTA</option>
-				<option value="VIRACACHA" >VIRACACHA</option>
-				<option value="VISTAHERMOSA" >VISTAHERMOSA</option>
-				<option value="VITERBO">VITERBO</option>
-				<option value="YACOPI">YACOPI</option>
-				<option value="YACUANQUER"> YACUANQUER</option>
-				<option value="YAGUARA">YAGUARA</option>
-				<option value="YALI" >YALI</option>
-				<option value="YARUMAL" >YARUMAL</option>
-				<option value="YAVARATE" >YAVARATE</option>
-				<option value="YOLOMBO" >YOLOMBO</option>
-				<option value="YONDO" >YONDO</option>
-				<option value="YOPAL" >YOPAL</option>
-				<option value="YOTOCO" >YOTOCO</option>
-				<option value="YUMBO" >YUMBO</option>
-				<option value="ZAMBRANO" >ZAMBRANO</option>
-				<option value="ZAPATOCA" >ZAPATOCA</option>
-				<option value="ZAPAYAN" >ZAPAYAN</option>
-				<option value="ZARAGOZA" >ZARAGOZA</option>
-				<option value="ZARZAL" >ZARZAL</option>
-				<option value="ZETAQUIRA" >ZETAQUIRA</option>
-				<option value="ZIPACON" >ZIPACON</option>
-				<option value="ZIPAQUIRA" >ZIPAQUIRA</option>
+				<option value="VILLAVICENCIO"  >VILLAVICENCIO</option>
+				<option value="VILLAVIEJA"  >VILLAVIEJA</option>
+				<option value="VILLETA"  >VILLETA</option>
+				<option value="VIOTA"  >VIOTA</option>
+				<option value="VIRACACHA"  >VIRACACHA</option>
+				<option value="VISTAHERMOSA"  >VISTAHERMOSA</option>
+				<option value="VITERBO"  >VITERBO</option>
+				<option value="YACOPI"  >YACOPI</option>
+				<option value="YACUANQUER"  >YACUANQUER</option>
+				<option value="YAGUARA"  >YAGUARA</option>
+				<option value="YALI"  >YALI</option>
+				<option value="YARUMAL"  >YARUMAL</option>
+				<option value="YAVARATE"  >YAVARATE</option>
+				<option value="YOLOMBO"  >YOLOMBO</option>
+				<option value="YONDO"  >YONDO</option>
+				<option value="YOPAL"  >YOPAL</option>
+				<option value="YOTOCO"  >YOTOCO</option>
+				<option value="YUMBO"  >YUMBO</option>
+				<option value="ZAMBRANO"  >ZAMBRANO</option>
+				<option value="ZAPATOCA"  >ZAPATOCA</option>
+				<option value="ZAPAYAN"  >ZAPAYAN</option>
+				<option value="ZARAGOZA"  >ZARAGOZA</option>
+				<option value="ZARZAL"  >ZARZAL</option>
+				<option value="ZETAQUIRA"  >ZETAQUIRA</option>
+				<option value="ZIPACON"  >ZIPACON</option>
+				<option value="ZIPAQUIRA"  >ZIPAQUIRA</option>
               </select>
-              @error('citResidencia')
-              	 <div class="validate">{{ $message }}</div>
-              @enderror
-              {{-- <div class="validate"></div> --}}
+              <div class="validate"></div>
             </div>
           </div>
           <div class="form-row">
           	<div class="col-md-4 form-group">
-              <input type="text" class="form-control" name="citDireccion" id="direction" value="{{ old('citDireccion') }}" placeholder="Dirección" data-rule="minlen:6" data-msg="Por favor ingresar dirección">
-              @error('citDireccion')
-              	 <div class="validate">{{ $message }}</div>
-              @enderror
-              {{-- <div class="validate"></div> --}}
+              <input type="text" class="form-control" name="direction" id="direction" placeholder="Dirección" data-rule="minlen:6" data-msg="Por favor ingresar dirección">
+              <div class="validate"></div>
             </div>
           	<div class="col-md-4 form-group">
-              <input type="tel" class="form-control" name="citTelefono" id="phone" value="{{ old('citTelefono') }}" placeholder="Teléfono de Contacto" data-rule="minlen:10" data-msg="Por favor numero de teléfono">
-              @error('citTelefono')
-              	 <div class="validate">{{ $message }}</div>
-              @enderror
-              {{-- <div class="validate"></div> --}}
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Teléfono de Contacto" data-rule="minlen:10" data-msg="Por favor numero de teléfono">
+              <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group">
-              <input type="email" class="form-control" name="citEmail" id="email" value="{{ old('citEmail') }}" placeholder="Correo Electrónico" data-rule="email" data-msg="Por favor ingrese un correo electrónico valido">
-              @error('citEmail')
-              	 <div class="validate">{{ $message }}</div>
-              @enderror
-             {{--  <div class="validate"></div> --}}
+              <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electrónico" data-rule="email" data-msg="Por favor ingrese un correo electrónico valido">
+              <div class="validate"></div>
             </div>
             
           </div>
           <div class="form-row">
           	<div class="col-md-4 form-group">
-              <select name="citEPS" id="eps" value="{{ old('citEPS') }}" class="form-control">
+              <select name="eps" id="eps" class="form-control">
                 <option value="">EPS a la que pertenece</option>
                 <option value="ACCIDENTES  DE TRANSITO SIN DOCUMENTOS- NO FACTURAR">ACCIDENTES  DE TRANSITO SIN DOCUMENTOS- NO FACTURAR</option>
-				<option value="ADRES - ATENCION DE ACCIDENTES DE TRANSITO SOAT">ADRES - ATENCION DE ACCIDENTES DE TRANSITO SOAT</option>
-				<option value="ADRES - EVENTOS CATASTROFICOS">ADRES - EVENTOS CATASTROFICOS</option>
-				<option value="ADRES  EVENTOS TERRORISTAS">ADRES  EVENTOS TERRORISTAS</option>
-				<option value="AGREMIACION SINDICAL SAVITRA">AGREMIACION SINDICAL SAVITRA</option>
-				<option value="ALIANSALUD EPSC SIN CONTRATO POS ATENCION DE III Y IV NIVEL DE COMPLEJIDAD">ALIANSALUD EPSC SIN CONTRATO POS ATENCION DE III Y IV NIVEL DE COMPLEJIDAD</option>
-				<option value="ALIANZA MEDELLIN ANTIOQUIA EPS CONTRIBUTIVO">ALIANZA MEDELLIN ANTIOQUIA EPS CONTRIBUTIVO</option>
-				<option value="ALIANZA MEDELLIN ANTIOQUIA EPSS SAS">ALIANZA MEDELLIN ANTIOQUIA EPSS SAS</option>
-				<option value="ALLIANZ SEGUROS DE VIDA">ALLIANZ SEGUROS DE VIDA</option>
-				<option value="ALLIANZ SEGUROS DE VIDA S.A - MEDICINA PREPAGADA">ALLIANZ SEGUROS DE VIDA S.A - MEDICINA PREPAGADA</option>
-				<option value="ALLIANZ SEGUROS S A   SOAT">ALLIANZ SEGUROS S A   SOAT</option>
-				<option value="ANAS WAYUU EPS I">ANAS WAYUU EPS I</option>
-				<option value="ASMET SALUD EPS SAS REGIMEN CONTRIBUTIVO - OTROSI CONTRATO HUI-183-S18">ASMET SALUD EPS SAS REGIMEN CONTRIBUTIVO - OTROSI CONTRATO HUI-183-S18</option>
-				<option value="ASMET SALUD EPS SAS REGIMEN SUBSIDIADO - OTROSI CONTRATO HUI-183-S18">ASMET SALUD EPS SAS REGIMEN SUBSIDIADO - OTROSI CONTRATO HUI-183-S18</option>
-				<option value="ASOCIACION INDIGENA DEL CAUCA REGIMEN CONTRIBUTIVO - PROPUESTA CONTRATACION 2019">ASOCIACION INDIGENA DEL CAUCA REGIMEN CONTRIBUTIVO - PROPUESTA CONTRATACION 2019</option>
-				<option value="ASOCIACION INDIGENA DEL CAUCA REGIMEN SUBSIDIADO - PROPUESTA CONTRATACION 2019">ASOCIACION INDIGENA DEL CAUCA REGIMEN SUBSIDIADO - PROPUESTA CONTRATACION 2019</option>
-				<option value="ASOCIACION MUTUAL BARRIOS UNIDOS DE QUIBDO SALDO INICIAL (01/12/09 A 31/12/12)">ASOCIACION MUTUAL BARRIOS UNIDOS DE QUIBDO SALDO INICIAL (01/12/09 A 31/12/12)</option>
-				<option value="ASOCIACION MUTUAL SER E S S REGIMEN CONTRIBUTIVO">ASOCIACION MUTUAL SER E S S REGIMEN CONTRIBUTIVO</option>
-				<option value="ASOCIACION MUTUAL SER E S S REGIMEN SUBSIDIADO">ASOCIACION MUTUAL SER E S S REGIMEN SUBSIDIADO</option>
-				<option value="ASSIST CARD DE COLOMBIA LTDA COMPANIA DE ASISTENCIA AL VIAJERO DE COLOMBIA LTDA">ASSIST CARD DE COLOMBIA LTDA COMPANIA DE ASISTENCIA AL VIAJERO DE COLOMBIA LTDA</option>
-				<option value="AXA  COLPATRIA S A  ATENCION ACCIDENTES DE TRANSITO">AXA  COLPATRIA S A  ATENCION ACCIDENTES DE TRANSITO</option>
-				<option value="AXA COLPATRIA MEDICINA PREPAGADA S.A">AXA COLPATRIA MEDICINA PREPAGADA S.A</option>
-				<option value="AXA COLPATRIA SEGUROS DE VIDA S.A.">AXA COLPATRIA SEGUROS DE VIDA S.A.</option>
+				<option value="ADRES - ATENCION DE ACCIDENTES DE TRANSITO SOAT"  >ADRES - ATENCION DE ACCIDENTES DE TRANSITO SOAT</option>
+				<option value="ADRES - EVENTOS CATASTROFICOS"  >ADRES - EVENTOS CATASTROFICOS</option>
+				<option value="ADRES  EVENTOS TERRORISTAS"  >ADRES  EVENTOS TERRORISTAS</option>
+				<option value="AGREMIACION SINDICAL SAVITRA"  >AGREMIACION SINDICAL SAVITRA</option>
+				<option value="ALIANSALUD EPSC SIN CONTRATO POS ATENCION DE III Y IV NIVEL DE COMPLEJIDAD"  >ALIANSALUD EPSC SIN CONTRATO POS ATENCION DE III Y IV NIVEL DE COMPLEJIDAD</option>
+				<option value="ALIANZA MEDELLIN ANTIOQUIA EPS CONTRIBUTIVO"  >ALIANZA MEDELLIN ANTIOQUIA EPS CONTRIBUTIVO</option>
+				<option value="ALIANZA MEDELLIN ANTIOQUIA EPSS SAS"  >ALIANZA MEDELLIN ANTIOQUIA EPSS SAS</option>
+				<option value="ALLIANZ SEGUROS DE VIDA"  >ALLIANZ SEGUROS DE VIDA</option>
+				<option value="ALLIANZ SEGUROS DE VIDA S.A - MEDICINA PREPAGADA"  >ALLIANZ SEGUROS DE VIDA S.A - MEDICINA PREPAGADA</option>
+				<option value="ALLIANZ SEGUROS S A   SOAT"  >ALLIANZ SEGUROS S A   SOAT</option>
+				<option value="ANAS WAYUU EPS I"  >ANAS WAYUU EPS I</option>
+				<option value="ASMET SALUD EPS SAS REGIMEN CONTRIBUTIVO - OTROSI CONTRATO HUI-183-S18"  >ASMET SALUD EPS SAS REGIMEN CONTRIBUTIVO - OTROSI CONTRATO HUI-183-S18</option>
+				<option value="ASMET SALUD EPS SAS REGIMEN SUBSIDIADO - OTROSI CONTRATO HUI-183-S18"  >ASMET SALUD EPS SAS REGIMEN SUBSIDIADO - OTROSI CONTRATO HUI-183-S18</option>
+				<option value="ASOCIACION INDIGENA DEL CAUCA REGIMEN CONTRIBUTIVO - PROPUESTA CONTRATACION 2019"  >ASOCIACION INDIGENA DEL CAUCA REGIMEN CONTRIBUTIVO - PROPUESTA CONTRATACION 2019</option>
+				<option value="ASOCIACION INDIGENA DEL CAUCA REGIMEN SUBSIDIADO - PROPUESTA CONTRATACION 2019"  >ASOCIACION INDIGENA DEL CAUCA REGIMEN SUBSIDIADO - PROPUESTA CONTRATACION 2019</option>
+				<option value="ASOCIACION MUTUAL BARRIOS UNIDOS DE QUIBDO SALDO INICIAL (01/12/09 A 31/12/12)"  >ASOCIACION MUTUAL BARRIOS UNIDOS DE QUIBDO SALDO INICIAL (01/12/09 A 31/12/12)</option>
+				<option value="ASOCIACION MUTUAL SER E S S REGIMEN CONTRIBUTIVO"  >ASOCIACION MUTUAL SER E S S REGIMEN CONTRIBUTIVO</option>
+				<option value="ASOCIACION MUTUAL SER E S S REGIMEN SUBSIDIADO"  >ASOCIACION MUTUAL SER E S S REGIMEN SUBSIDIADO</option>
+				<option value="ASSIST CARD DE COLOMBIA LTDA COMPANIA DE ASISTENCIA AL VIAJERO DE COLOMBIA LTDA"  >ASSIST CARD DE COLOMBIA LTDA COMPANIA DE ASISTENCIA AL VIAJERO DE COLOMBIA LTDA</option>
+				<option value="AXA  COLPATRIA S A  ATENCION ACCIDENTES DE TRANSITO"  >AXA  COLPATRIA S A  ATENCION ACCIDENTES DE TRANSITO</option>
+				<option value="AXA COLPATRIA MEDICINA PREPAGADA S.A"  >AXA COLPATRIA MEDICINA PREPAGADA S.A</option>
+				<option value="AXA COLPATRIA SEGUROS DE VIDA S.A."  >AXA COLPATRIA SEGUROS DE VIDA S.A.</option>
 				<option value="AXA COLPATRIA SEGUROS S.A. - POLIZAS ESTUDIANTILES"  >AXA COLPATRIA SEGUROS S.A. - POLIZAS ESTUDIANTILES</option>
-				<option value="CAJA COMPENSACION FAMILIAR DE CARTAGENA">CAJA COMPENSACION FAMILIAR DE CARTAGENA</option>
-				<option value="CAJA DE COMPENSACION FAMILAR DE NARINO">CAJA DE COMPENSACION FAMILAR DE NARINO</option>
-				<option value="CAJA DE COMPENSACION FAMILIAR ATLANTICO CAJACOPI SIN CONTRATO">CAJA DE COMPENSACION FAMILIAR ATLANTICO CAJACOPI SIN CONTRATO</option>
-				<option value="CAJA DE COMPENSACION FAMILIAR- CAFAM">CAJA DE COMPENSACION FAMILIAR- CAFAM</option>
-				<option value="CAJA DE COMPENSACION FAMILIAR DE CUNDINAMARCA COMFACUNDI CONTRIBUTIVO">CAJA DE COMPENSACION FAMILIAR DE CUNDINAMARCA COMFACUNDI CONTRIBUTIVO</option>
-				<option value="CAJA DE COMPENSACION FAMILIAR DE CUNDINAMARCA COMFACUNDI SUBSIDIADO">CAJA DE COMPENSACION FAMILIAR DE CUNDINAMARCA COMFACUNDI SUBSIDIADO</option>
-				<option value="CAJA DE COMPENSACION FAMILIAR DE LA GUAJIRA  URGENCIAS">CAJA DE COMPENSACION FAMILIAR DE LA GUAJIRA  URGENCIAS</option>
+				<option value="CAJA COMPENSACION FAMILIAR DE CARTAGENA"  >CAJA COMPENSACION FAMILIAR DE CARTAGENA</option>
+				<option value="CAJA DE COMPENSACION FAMILAR DE NARINO"  >CAJA DE COMPENSACION FAMILAR DE NARINO</option>
+				<option value="CAJA DE COMPENSACION FAMILIAR ATLANTICO CAJACOPI SIN CONTRATO"  >CAJA DE COMPENSACION FAMILIAR ATLANTICO CAJACOPI SIN CONTRATO</option>
+				<option value="CAJA DE COMPENSACION FAMILIAR- CAFAM"  >CAJA DE COMPENSACION FAMILIAR- CAFAM</option>
+				<option value="CAJA DE COMPENSACION FAMILIAR DE CUNDINAMARCA COMFACUNDI CONTRIBUTIVO"  >CAJA DE COMPENSACION FAMILIAR DE CUNDINAMARCA COMFACUNDI CONTRIBUTIVO</option>
+				<option value="CAJA DE COMPENSACION FAMILIAR DE CUNDINAMARCA COMFACUNDI SUBSIDIADO"  >CAJA DE COMPENSACION FAMILIAR DE CUNDINAMARCA COMFACUNDI SUBSIDIADO</option>
+				<option value="CAJA DE COMPENSACION FAMILIAR DE LA GUAJIRA  URGENCIAS"  >CAJA DE COMPENSACION FAMILIAR DE LA GUAJIRA  URGENCIAS</option>
 				<option value="CAJA DE COMPENSACION FAMILIAR DE SUCRE - COMFAMILIAR SUCRE"  >CAJA DE COMPENSACION FAMILIAR DE SUCRE - COMFAMILIAR SUCRE</option>
 				<option value="CAJA DE COMPENSACION FAMILIAR DEL CHOCO EPSS"  >CAJA DE COMPENSACION FAMILIAR DEL CHOCO EPSS</option>
 				<option value="CAJACOPI REGIMEN CONTRIBUTIVO"  >CAJACOPI REGIMEN CONTRIBUTIVO</option>
@@ -1397,13 +1369,10 @@
 				<option value="UROLASER EMPRESA UNIPERSONAL-SUMINISTROS DE HEMODERIVADOS"  >UROLASER EMPRESA UNIPERSONAL-SUMINISTROS DE HEMODERIVADOS</option>
 				<option value="WORLD TRAVEL ASSIST LATAM S.A.S."  >WORLD TRAVEL ASSIST LATAM S.A.S.</option>
 			  </select>
-			  		@error('citEPS')
-              	 <div class="validate">{{ $message }}</div>
-              @enderror
-              {{-- <div class="validate"></div> --}}
+              <div class="validate"></div>
             </div>
           	<div class="col-md-4 form-group">
-              <select name="citEstrato" id="citEstrato" value="{{ old('citEstrato') }}" class="form-control">
+              <select name="estrato" id="estrato" class="form-control">
                 <option value="">Estrato</option>
                 <option value="Estrato 1">Estrato 1</option>
                 <option value="Estrato 2">Estrato 2</option>
@@ -1411,13 +1380,10 @@
                 <option value="Estrato 4">Estrato 4</option>
                 <option value="Estrato 5">Estrato 5</option>
               </select>
-              @error('citEstrato')
-              	 <div class="validate">{{ $message }}</div>
-              @enderror
-              {{-- <div class="validate"></div> --}}
+              <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group">
-              <select name="citEspecialidad" id="specialty" value="{{ old('citEspecialidad') }}" class="form-control">
+              <select name="specialty" id="specialty" class="form-control">
                 <option value="">Especialidad de la cita</option>
                 <option value="ACTIVIDAD FISICO TERAPEUTICA">ACTIVIDAD FISICO TERAPEUTICA</option>
 				<option value="ANESTESIOLOGIA"  >ANESTESIOLOGIA</option>
@@ -1664,19 +1630,13 @@
 				<option value="UROLOGIA ONCOLOGICA"  >UROLOGIA ONCOLOGICA</option>
 				<option value="VIROLOGIA"  >VIROLOGIA</option>
               </select>
-              @error('citEspecialidad')
-              	 <div class="validate">{{ $message }}</div>
-              @enderror
-              {{-- <div class="validate"></div> --}}
+              <div class="validate"></div>
             </div>
           </div>
 
           <div class="form-group">
-            <textarea class="form-control" name="citMensaje" value="{{ old('citMensaje') }}" rows="5" placeholder="Mensajes (notas)"></textarea>
-            @error('citMensaje')
-              <div class="validate">{{ $message }}</div>
-            @enderror
-            {{-- <div class="validate"></div> --}}
+            <textarea class="form-control" name="message" rows="5" placeholder="Mensajes (notas)"></textarea>
+            <div class="validate"></div>
           </div>
           <div class="mb-3">
             <div class="loading">Enviando......</div>

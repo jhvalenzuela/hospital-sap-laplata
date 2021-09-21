@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EntidadController;
 use App\Http\Controllers\NormatividadController;
 use App\Http\Controllers\SliderprincipalController;
+use App\Http\Controllers\CitasController;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -307,7 +309,9 @@ Route::get('/informacion-ciudadano/seguridad-del-paciente', function () {
 
 Route::get('informacion-ciudadano/citas', function () {
     return view('informacion/citas');
-});
+})->name('citas.create');
+
+Route::post('/informacion-ciudadano', [CitasController::class, 'create']);
 
 Route::get('/informacion-ciudadano/glosario-de-terminos', function () {
     return view('informacion/glosario');
