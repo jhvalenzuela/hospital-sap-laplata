@@ -16,7 +16,7 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        $appointments = appointment::all();
+        $appointments = Appointment::all();
         return view('admin.appointments.index', compact('appointments'));
     }
 
