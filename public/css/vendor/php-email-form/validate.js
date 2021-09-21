@@ -6,7 +6,7 @@
 !(function($) {
   "use strict";
 
-  $('form.php-email-form').submit(function(e) {
+  $('form.php-email-form-mmm').submit(function(e) {
     e.preventDefault();
     
     var f = $(this).find('.form-group'),

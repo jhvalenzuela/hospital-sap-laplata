@@ -16,18 +16,6 @@ class NormatividadSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('Normatividad')->insert([
-        //     'tipNormatividad' => 'Acuerdos',
-        //     'nomNormatividad' => 'Acuerdo Numero 001 de 2019',
-        //     'descripNormatividad' => 'Por el cual se refrenda el informe de la desagragación del presupuesto de ingresos y gastos e inversión para la vigencia 2019',
-        //     'fechPublic' => '2019/01/20',
-        //     'fechExpedic' => '2019/01/15',
-        //     'iconNormatividad' => '',
-        //     'pesoArchivoNormatividad' => '15',
-        //     'created_at' => now(),
-        //     'updated_at' => now()
-        // ]);
-
         Normatividad::create([
             'tipNormatividad' => 'Acuerdos',
             'nomNormatividad' => 'Acuerdo Numero 001 de 2019',
