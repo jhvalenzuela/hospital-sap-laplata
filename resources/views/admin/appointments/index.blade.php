@@ -22,8 +22,13 @@
                         <th>Documento</th>
                         <th>Nombres</th>
                         <th>Apellidos</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Ciudad</th>
+                        <th>Dirección</th>
                         <th>EPS</th>
                         <th>Especialidad</th>
+                        <th>Notas</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -36,8 +41,13 @@
                             <td>{{$appointment->citNumDocumento}}</td>
                             <td>{{$appointment->citNombres}}</td>
                             <td>{{$appointment->citApellidos}}</td>
+                            <td>{{$appointment->citTelefono}}</td>
+                            <td>{{$appointment->citEmail}}</td>
+                            <td>{{$appointment->citResidencia}}</td>
+                            <td>{{$appointment->citDireccion}}</td>
                             <td>{{$appointment->citEPS}}</td>
                             <td>{{$appointment->citEspecialidad}}</td>
+                            <td>{{$appointment->citMensaje}}</td>
                             <td>
                                 <a class="btn btn-primary btn-sm" href="{{route('admin.appointments.edit', $appointment)}}">Editar</a>
                             </td>
@@ -76,8 +86,8 @@
                 "infoFiltered": "(filtrado de _MAX_ registros totales)",
                 "search": "Buscar:",
                 "paginate": {
-                    "next":"Siguiente",
-                    "previus":"Anterior"
+                    "next": "Siguiente",
+                    "previous": "Anterior"
                 }
             }
          });
