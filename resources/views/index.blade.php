@@ -12,7 +12,7 @@
 
         <!-- Slide --> 
         @forelse($sliderprincipal as $sliderp)
-        <div class="carousel-item {{ $sliderp->id == 1 ? 'active' :'' }}" style="background-image: url('{{ asset('img/slide/'.$sliderp->slideImagen)}}')">
+        <div class="carousel-item {{ $sliderp->id == 1 ? 'active' :'' }}" style="background-image: url('{{ asset($sliderp->slideImagen)}}')">
           <div class="container">
             <h2>{{ $sliderp->slideTitulo }}</h2>
             <p>{{ $sliderp->slideDescription }}</p>

@@ -28,6 +28,7 @@ class CreateCitasTable extends Migration
             $table->string('citEstrato', 10);
             $table->string('citEspecialidad');
             $table->text('citMensaje');
+            $table->string('citAuthorization');
             $table->timestamps();
         });
     }

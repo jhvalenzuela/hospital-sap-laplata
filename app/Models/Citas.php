@@ -9,5 +9,5 @@ class Citas extends Model
 {
     //use HasFactory;
     //protected $table = 'citas';
-    protected $fillable = ['citNombres', 'citApellidos', 'citTipoDocumento', 'citNumDocumento', 'citFecNacimiento', 'citResidencia', 'citDireccion', 'citTelefono', 'citEmail', 'citEPS', 'citEstrato', 'citEspecialidad', 'citMensaje'];
+    protected $fillable = ['citNombres', 'citApellidos', 'citTipoDocumento', 'citNumDocumento', 'citFecNacimiento', 'citResidencia', 'citDireccion', 'citTelefono', 'citEmail', 'citEPS', 'citEstrato', 'citEspecialidad', 'citMensaje', 'citAuthorization'];
 }

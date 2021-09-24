@@ -29,6 +29,7 @@
                         <th>EPS</th>
                         <th>Especialidad</th>
                         <th>Notas</th>
+                        <th>Autorización</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -48,10 +49,12 @@
                             <td>{{$appointment->citEPS}}</td>
                             <td>{{$appointment->citEspecialidad}}</td>
                             <td>{{$appointment->citMensaje}}</td>
-                            <td>
+                            <td><a class="btn btn-success btn-sm" href="{{ asset($appointment->citAuthorization) }}" target="_blank">Ver autorización</a>
+                            </td>
+                            <td width="10px">
                                 <a class="btn btn-primary btn-sm" href="{{route('admin.appointments.edit', $appointment)}}">Editar</a>
                             </td>
-                            <td>
+                            <td width="10px">
                                 <form action="{{route('admin.appointments.destroy', $appointment)}}" method="POST">
                                     @csrf
                                     @method('delete')

@@ -24,12 +24,18 @@
     <section class="appointment section-bg">
       <div class="container" data-aos="fade-up">
 
+				@if (session('info'))
+        	<div class="alert alert-success">
+          	<strong>{{session('info')}}</strong>
+        	</div>
+    		@endif
+    		
         <div class="section-title-innerpage">
           <h2>Formulario citas medicas</h2>
           <p>Señor usuario a través del siguiente formulario usted puede solicitar su cita medica. Por favor diligencie todos los campos.</p>
         </div>
 
-        <form action="{{ url('/informacion-ciudadano')}}" method="POST" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+        <form action="{{ url('/informacion-ciudadano')}}" method="POST" enctype="multipart/form-data" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
         	@csrf
           <div class="form-row">
             <div class="col-md-4 form-group">
@@ -1678,6 +1684,15 @@
             @enderror
             {{-- <div class="validate"></div> --}}
           </div>
+
+            <div class="form-group">
+    					<label for="exampleFormControlFile1">Anexar autorización</label>
+    					<input type="file" name="citAuthorization" class="form-control" value="{{old('citAuthorization')}}" id="exampleFormControlFile1">
+    					 @error('citAuthorization')
+              	<div class="validate">{{ $message }}</div>
+            	@enderror
+  					</div>
+
           <div class="mb-3">
             <div class="loading">Enviando......</div>
             <div class="error-message"></div>

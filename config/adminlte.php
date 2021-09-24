@@ -85,7 +85,7 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
@@ -265,11 +265,13 @@ return [
             'text' => 'Citas',
             'route'  => 'admin.appointments.index',
             'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/appointments*'],
         ],
         [
             'text' => 'Slider Principal',
-            'url'  => '#',
+            'route'  => 'admin.mainsliders.index',
             'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/mainsliders*'],
         ],
         [
             'text' => 'Normatividad',
